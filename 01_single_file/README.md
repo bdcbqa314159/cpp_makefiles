@@ -41,6 +41,20 @@ make: `main' is up to date.
 
 This is the core idea: **dependency-driven incremental builds**.
 
+## The `clean` target
+
+The Makefile also includes a `clean` target:
+
+```makefile
+.PHONY: clean
+clean:
+	rm -f main
+```
+
+- `clean` has **no prerequisites** — it always runs its recipe
+- `.PHONY: clean` tells Make that `clean` is a command, not a file. Without this, if a file named `clean` existed in the directory, Make would say "clean is up to date" and do nothing. We'll revisit `.PHONY` in detail in [lesson 08](../08_multiple_targets/)
+- `rm -f` removes the file silently (no error if it doesn't exist)
+
 ## Try it
 
 ```bash
