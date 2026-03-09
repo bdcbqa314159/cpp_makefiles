@@ -26,3 +26,7 @@ main.o: main.cpp greet.hpp
 
 greet.o: greet.cpp greet.hpp
 	$(CXX) $(CXXFLAGS) -c greet.cpp
+
+.PHONY: clean
+clean:
+	rm -f $(TARGET) $(OBJS)

@@ -22,3 +22,7 @@ main.o: main.cpp calc.hpp
 
 calc.o: calc.cpp calc.hpp
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
+
+.PHONY: clean
+clean:
+	rm -f $(TARGET) $(OBJS)

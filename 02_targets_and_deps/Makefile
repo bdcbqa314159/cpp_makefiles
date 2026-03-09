@@ -15,3 +15,7 @@ main.o: main.cpp math.hpp
 
 math.o: math.cpp math.hpp
 	g++ -std=c++20 -Wall -Wextra -c math.cpp
+
+.PHONY: clean
+clean:
+	rm -f main main.o math.o

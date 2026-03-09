@@ -30,5 +30,9 @@ $(TARGET): $(OBJS)
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
+.PHONY: clean
+clean:
+	rm -f $(TARGET) $(OBJS) $(DEPS)
+
 # Pull in auto-generated dependency rules
 -include $(DEPS)

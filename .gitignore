@@ -6,8 +6,9 @@
 *.dylib
 build/
 
-# Executables (no extension)
-# Listed explicitly per lesson to avoid ignoring source files
+# Executables produced by lessons
+**/main
+**/app
 
 # OS
 .DS_Store

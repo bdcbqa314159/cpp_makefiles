@@ -24,3 +24,7 @@ $(TARGET): $(OBJS)
 # One rule to compile them all
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
+
+.PHONY: clean
+clean:
+	rm -f $(TARGET) $(OBJS)
