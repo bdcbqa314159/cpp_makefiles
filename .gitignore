@@ -1,0 +1,21 @@
+# Build artifacts
+*.o
+*.d
+*.a
+*.so
+*.dylib
+build/
+
+# Executables (no extension)
+# Listed explicitly per lesson to avoid ignoring source files
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+compile_commands.json
+
+# Project notes
+NOTES.md
