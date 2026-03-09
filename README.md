@@ -8,6 +8,16 @@ A progressive, hands-on guide to GNU Make for C++ projects. Each lesson is a sel
 - GNU Make (`make --version`)
 - macOS or Linux
 
+### Windows users
+
+These Makefiles use GNU Make, `g++`, and Unix shell commands (`rm`, `mkdir -p`, `uname`). On Windows:
+
+- **WSL** (recommended) — install Ubuntu via WSL, then `sudo apt install g++ make`. Everything works as-is.
+- **MSYS2/MinGW** — provides `g++`, `make`, and Unix tools natively on Windows.
+- **Learn the concepts, use CMake for builds** — the ideas (targets, dependencies, incremental builds) are universal. Lesson 16 bridges to CMake, which generates the right build files for any platform.
+
+Note: Windows historically used `nmake` (Microsoft's Make) and IDE project files (`.vcxproj`) instead of GNU Make. This platform split is exactly why CMake was created — one description, any build system.
+
 ## Lessons
 
 ### Phase 1 — Fundamentals
