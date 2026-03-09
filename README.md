@@ -1,10 +1,10 @@
 # cpp_makefiles
 
-A progressive, hands-on guide to GNU Make for C++ projects. Each lesson is a self-contained folder with its own Makefile and source files, building on the previous.
+A progressive, hands-on guide to GNU Make for C++ projects. Each lesson is a self-contained folder with its own Makefile, source files, and README explaining the concepts.
 
 ## Prerequisites
 
-- g++ or clang++ with C++23 support
+- g++ or clang++ with C++20 support
 - GNU Make (`make --version`)
 - macOS or Linux
 
@@ -14,41 +14,41 @@ A progressive, hands-on guide to GNU Make for C++ projects. Each lesson is a sel
 
 | # | Topic | Key concepts |
 |---|-------|-------------|
-| 01 | Single file | Compiling by hand, then a minimal Makefile |
-| 02 | Targets & dependencies | Multiple source files, object files, linking |
-| 03 | Variables | `CXX`, `CXXFLAGS`, `LDFLAGS`, `TARGET` |
-| 04 | Automatic variables | `$@`, `$<`, `$^`, `$*` |
-| 05 | Pattern rules | `%.o: %.cpp`, implicit rules |
+| [01](01_single_file/) | Single file | Targets, prerequisites, recipes, tab indentation |
+| [02](02_targets_and_deps/) | Targets & dependencies | Compile vs link, `.o` files, incremental builds |
+| [03](03_variables/) | Variables | `CXX`, `CXXFLAGS`, `LDFLAGS`, `TARGET`, overriding from CLI |
+| [04](04_automatic_variables/) | Automatic variables | `$@`, `$<`, `$^`, `$(@D)` |
+| [05](05_pattern_rules/) | Pattern rules | `%.o: %.cpp`, substitution references |
 
 ### Phase 2 — Real Projects
 
 | # | Topic | Key concepts |
 |---|-------|-------------|
-| 06 | Separate src/include | `VPATH`, `-I` include paths |
-| 07 | Header dependencies | `-MMD -MP`, auto-generated `.d` files |
-| 08 | Multiple targets | `all`, `clean`, `rebuild`, `.PHONY` |
-| 09 | Static library | `ar rcs`, linking `.a` files |
-| 10 | Shared library | `-shared`, `-fPIC`, `RPATH` |
+| [06](06_src_include/) | Separate src/include | `VPATH`, `-I` include paths |
+| [07](07_header_deps/) | Header dependencies | `-MMD -MP`, auto-generated `.d` files, `-include` |
+| [08](08_multiple_targets/) | Multiple targets | `all`, `clean`, `rebuild`, `.PHONY` |
+| [09](09_static_library/) | Static library | `ar rcs`, `-L`, `-l`, link order |
+| [10](10_shared_library/) | Shared library | `-fPIC`, `-shared`, `-rpath`, platform detection |
 
 ### Phase 3 — Advanced
 
 | # | Topic | Key concepts |
 |---|-------|-------------|
-| 11 | Recursive Make | Subdirectory Makefiles, `$(MAKE) -C` |
-| 12 | Non-recursive Make | Single Makefile, `include` fragments |
-| 13 | Out-of-source builds | `BUILDDIR`, `VPATH`, directory creation |
-| 14 | Conditional logic | `ifeq`, platform detection, debug/release |
-| 15 | Testing | Compile and run tests as a Make target |
+| [11](11_recursive_make/) | Recursive Make | `$(MAKE) -C`, subdirectory Makefiles, ordering |
+| [12](12_nonrecursive_make/) | Non-recursive Make | `include`, module fragments, single dependency graph |
+| [13](13_out_of_source/) | Out-of-source builds | `BUILDDIR`, `$(@D)`, `mkdir -p` |
+| [14](14_conditionals/) | Conditional logic | `ifeq`, `ifdef`, `?=`, `$(error)`, debug/release |
+| [15](15_testing/) | Testing | `make test`, exit codes, minimal assert framework |
 
 ### Phase 4 — Bridge to CMake
 
 | # | Topic | Key concepts |
 |---|-------|-------------|
-| 16 | Make vs CMake | Same project built both ways, side-by-side |
+| [16](16_make_vs_cmake/) | Make vs CMake | Same project built both ways, what CMake automates |
 
 ## Usage
 
-Each lesson is independent:
+Each lesson is independent — click a folder to read the explanation, then try it locally:
 
 ```bash
 cd 01_single_file
