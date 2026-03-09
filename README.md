@@ -50,11 +50,15 @@ Note: Windows historically used `nmake` (Microsoft's Make) and IDE project files
 | [14](14_conditionals/) | Conditional logic | `ifeq`, `ifdef`, `?=`, `$(error)`, debug/release |
 | [15](15_testing/) | Testing | `make test`, exit codes, minimal assert framework |
 
-### Phase 4 — Bridge to CMake
+### Phase 4 — Production Skills
 
 | # | Topic | Key concepts |
 |---|-------|-------------|
 | [16](16_make_vs_cmake/) | Make vs CMake | Same project built both ways, what CMake automates |
+| [17](17_functions/) | Functions & auto-discovery | `$(wildcard)`, `$(patsubst)`, `$(filter)`, `$(foreach)`, `$(call)` |
+| [18](18_parallel_builds/) | Parallel builds | `make -j`, order-only prerequisites, `$(MAKE)` propagation |
+| [19](19_multiple_executables/) | Multiple executables | Shared library + 2 binaries from one Makefile |
+| [20](20_debugging_makefiles/) | Debugging Makefiles | `make -n`, `make -p`, `$(info)`, `$(warning)`, `$(error)` |
 
 ## Usage
 
