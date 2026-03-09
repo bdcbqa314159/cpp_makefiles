@@ -96,7 +96,7 @@ cd 14_conditionals
 make                            # debug build (default)
 ./build/debug/app               # "Running in DEBUG mode"
 make BUILD=release VERSION=1.2.3
-./build/release/app             # "Running in RELEASE mode, Version: 1.2.3"
+./build/release/app             # "Running in RELEASE mode" + "Version: 1.2.3"
 make info                       # print resolved config
 make BUILD=fast                 # error: unknown build mode
 make clean

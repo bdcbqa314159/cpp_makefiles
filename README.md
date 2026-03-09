@@ -57,8 +57,39 @@ Note: Windows historically used `nmake` (Microsoft's Make) and IDE project files
 | [16](16_make_vs_cmake/) | Make vs CMake | Same project built both ways, what CMake automates |
 | [17](17_functions/) | Functions & auto-discovery | `$(wildcard)`, `$(patsubst)`, `$(filter)`, `$(foreach)`, `$(call)` |
 | [18](18_parallel_builds/) | Parallel builds | `make -j`, order-only prerequisites, `$(MAKE)` propagation |
-| [19](19_multiple_executables/) | Multiple executables | Shared library + 2 binaries from one Makefile |
+| [19](19_multiple_executables/) | Multiple executables | Static library + 2 binaries from one Makefile |
 | [20](20_debugging_makefiles/) | Debugging Makefiles | `make -n`, `make -p`, `$(info)`, `$(warning)`, `$(error)` |
+
+## Concepts at a Glance
+
+Which lessons cover which features — use this to jump to what you need.
+
+| Concept | Introduced | Also used in |
+|---------|-----------|-------------|
+| Targets, prerequisites, recipes | 01 | all |
+| Compile vs link (`.o` files) | 02 | 03+ |
+| Variables (`CXX`, `CXXFLAGS`) | 03 | 04+ |
+| Automatic variables (`$@`, `$<`, `$^`) | 04 | 05+ |
+| Pattern rules (`%.o: %.cpp`) | 05 | 06+ |
+| `VPATH`, `-Iinclude` | 06 | 07+ |
+| Header deps (`-MMD -MP`, `-include`) | 07 | 08+ |
+| `.PHONY`, `all`/`clean`/`rebuild` | 08 | 09+ |
+| Static libraries (`ar rcs`, `-L`, `-l`) | 09 | 15, 16, 19 |
+| Shared libraries (`-fPIC`, `-shared`, `-rpath`) | 10 | — |
+| Platform detection (`$(shell uname)`) | 10 | 14 |
+| Recursive Make (`$(MAKE) -C`) | 11 | — |
+| Non-recursive Make (`include`, `module.mk`) | 12 | — |
+| Out-of-source builds (`BUILDDIR`, `$(@D)`) | 13 | 14+ |
+| Conditionals (`ifeq`, `ifdef`, `?=`) | 14 | 16 |
+| `$(error)` guard | 14 | 20 |
+| Test targets (`make test`) | 15 | 16 |
+| CMake comparison | 16 | — |
+| `$(wildcard)`, `$(patsubst)`, `$(filter)` | 17 | 18, 20 |
+| `$(call)` user-defined functions | 17 | — |
+| Parallel builds (`make -j`) | 18 | — |
+| Order-only prerequisites (`\|`) | 18 | — |
+| Multiple executables | 19 | — |
+| `make -n`, `make -p`, `$(info)`, `$(warning)` | 20 | — |
 
 ## Usage
 

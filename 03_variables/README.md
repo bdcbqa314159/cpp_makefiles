@@ -19,10 +19,13 @@ SRCS     = main.cpp greet.cpp
 OBJS     = main.o greet.o
 
 $(TARGET): $(OBJS)
-	$(CXX) $(LDFLAGS) -o $(TARGET) $(OBJS)
+	$(CXX) -o $(TARGET) $(OBJS) $(LDFLAGS)
 
 main.o: main.cpp greet.hpp
 	$(CXX) $(CXXFLAGS) -c main.cpp
+
+greet.o: greet.cpp greet.hpp
+	$(CXX) $(CXXFLAGS) -c greet.cpp
 ```
 
 ## Standard variable names

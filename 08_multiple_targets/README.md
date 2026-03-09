@@ -16,6 +16,10 @@ Most Makefiles define these standard targets:
 | `test` | Build and run tests (lesson 15) |
 | `install` | Copy files to system directories |
 
+## Why `app` instead of `main`?
+
+In lessons 01–07 the executable was called `main` — matching the single source file. From this lesson onward, projects have multiple source files (logger, app, etc.), so the executable is named `app` to reflect that it's a complete application, not just one file. The name is arbitrary — what matters is that `TARGET` holds it.
+
 ## `.PHONY` — why it matters
 
 ```makefile

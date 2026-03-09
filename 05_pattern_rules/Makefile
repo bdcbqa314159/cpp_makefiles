@@ -22,6 +22,7 @@ $(TARGET): $(OBJS)
 	$(CXX) -o $@ $^
 
 # One rule to compile them all
+# Note: header deps are not tracked here — see lesson 07
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
 

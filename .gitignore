@@ -5,6 +5,7 @@
 *.so
 *.dylib
 build/
+cmake_build/
 
 # Executables produced by lessons
 **/main

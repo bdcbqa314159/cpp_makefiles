@@ -20,6 +20,7 @@ VPATH = src
 $(TARGET): $(OBJS)
 	$(CXX) -o $@ $^
 
+# Note: header deps are not tracked here — see lesson 07
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
