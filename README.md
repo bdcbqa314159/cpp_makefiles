@@ -60,6 +60,15 @@ Note: Windows historically used `nmake` (Microsoft's Make) and IDE project files
 | [19](19_multiple_executables/) | Multiple executables | Static library + 2 binaries from one Makefile |
 | [20](20_debugging_makefiles/) | Debugging Makefiles | `make -n`, `make -p`, `$(info)`, `$(warning)`, `$(error)` |
 
+### Phase 5 — Niche Topics
+
+| # | Topic | Key concepts |
+|---|-------|-------------|
+| [21](21_eval_dynamic_rules/) | `$(eval)` and dynamic rules | `$(eval)`, `$(call)`, `define...endef`, `$$` escaping, `.DEFAULT_GOAL` |
+| [22](22_shell_external_tools/) | `$(shell)` and external tools | `$(shell)`, `:=` vs `=`, git metadata, `-D` defines, `FORCE` pattern |
+| [23](23_pkg_config/) | `pkg-config` and third-party libs | `pkg-config --cflags`/`--libs`, fallback flags, dependency checks |
+| [24](24_install_target/) | `install` target | `PREFIX`, `DESTDIR`, `install` command, `$(notdir)`, `$(dir)`, `$(basename)` |
+
 ## Concepts at a Glance
 
 Which lessons cover which features — use this to jump to what you need.
@@ -90,6 +99,13 @@ Which lessons cover which features — use this to jump to what you need.
 | Order-only prerequisites (`\|`) | 18 | — |
 | Multiple executables | 19 | — |
 | `make -n`, `make -p`, `$(info)`, `$(warning)` | 20 | — |
+| `$(eval)`, `$(call)`, `define...endef` | 21 | — |
+| `$(shell)` for build metadata | 22 | (also 10, 14) |
+| `FORCE` prerequisite (always rebuild) | 22 | — |
+| `pkg-config` integration | 23 | — |
+| `install`/`uninstall` targets | 24 | — |
+| `PREFIX`, `DESTDIR` conventions | 24 | — |
+| `$(notdir)`, `$(dir)`, `$(basename)`, `$(suffix)` | 24 | — |
 
 ## Usage
 
